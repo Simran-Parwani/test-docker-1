@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: hello-cloudsmith1
+  IMAGE_NAME: hello-cloudsmith2
   RELEASE_TAG: latest
 
 jobs:
