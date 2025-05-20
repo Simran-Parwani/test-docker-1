@@ -33,6 +33,7 @@ jobs:
       with:
         oidc-namespace: 'simran-parwani-testorg'
         oidc-service-slug: 'access'
+        oidc-auth-only: 'true'
      
     - name: Push to Cloudsmith
       uses: cloudsmith-io/action@master
