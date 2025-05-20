@@ -23,6 +23,12 @@ jobs:
     - name: Save Docker Image to Tar
       run: docker save $IMAGE_NAME:$RELEASE_TAG -o $IMAGE_NAME-$RELEASE_TAG.tar
 
+    - name: Authenticate with Cloudsmith via OIDC
+      uses: cloudsmith-io/cloudsmith-cli-action@v1.0.3
+      with:
+        oidc-namespace: 'simran-parwani-testorg'
+        oidc-service-slug: 'access'
+     
     - name: Push to Cloudsmith
       uses: cloudsmith-io/action@master
       with:
