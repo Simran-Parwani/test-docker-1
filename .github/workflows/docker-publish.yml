@@ -38,7 +38,7 @@ jobs:
     - name: Push to Cloudsmith
       uses: cloudsmith-io/action@master
       with:
-        api-key: 'tyUobdNPcj41yPAf'
+        api-key: ${{ env.CLOUDSMITH_API_KEY }}
         command: 'push'
         format: 'docker'
         owner: 'simran-parwani-testorg'  # replace if needed
